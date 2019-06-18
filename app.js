@@ -9,8 +9,8 @@ var myAge = 27;
 var hasHobbies = false;
 // hasHobbies = 1;
 // assign types
-var myRealAge;
-myRealAge = 25;
+// let myRealAge: number;
+// myRealAge = 25;
 // myRealAge = "hi";
 // array
 var hobbies = ["cooking", "sports"];
@@ -28,6 +28,65 @@ var myColor = Color.Blue;
 // console.log(myColor);
 // any
 var car = "BMW";
-console.log(car);
+// console.log(car);
 car = { brand: "BMW", series: 3 };
-console.log(car);
+// console.log(car);
+// functions
+function returnMyName() {
+    return myName;
+}
+// console.log(returnMyName());
+// void
+function sayHello() {
+    // console.log("Hello!");
+}
+// argument types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+console.log(multiply(2, 10));
+// function types
+var myMultiply;
+// myMultiply = sayHello;
+// myMultiply();
+myMultiply = multiply;
+// console.log(myMultiply(5, 2));
+// objects
+var userData = {
+    name: "Max",
+    age: 27
+};
+// userData = {
+//     a: "hello",
+//     b: 3
+// }
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// union types
+var myRealAge = 27;
+myRealAge = "27";
+// check types
+var finalValue = 30;
+if (typeof finalValue == "number") {
+    console.log("finalValue is a number");
+}
+// never type
+function neverReturns() {
+    throw new Error('An error!');
+}
+// nullable types
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
