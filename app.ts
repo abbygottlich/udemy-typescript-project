@@ -56,3 +56,13 @@ function makeArray(...args: number[]) {
     return args;
 }
 console.log(makeArray(1, 2, 6));
+
+// destructuring
+console.log("DESTRUCTURING");
+const myHobbies = ["cooking", "sports"];
+const [hobby1, hobby2] = myHobbies;
+console.log(hobby1, hobby2);
+
+const userData = {userName: "Max", userAge: 27};
+const {userName: myName, userAge: myAge} = userData;
+console.log(myName, myAge);
