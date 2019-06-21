@@ -60,3 +60,7 @@ console.log(hobby1, hobby2);
 var userData = { userName: "Max", userAge: 27 };
 var myName = userData.userName, myAge = userData.userAge;
 console.log(myName, myAge);
+// tepmlate literals
+var userName = "Max";
+var greeting = "This is a heading!\nI'm " + userName + ".\nThis is cool!";
+console.log(greeting);

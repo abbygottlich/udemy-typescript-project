@@ -66,3 +66,11 @@ console.log(hobby1, hobby2);
 const userData = {userName: "Max", userAge: 27};
 const {userName: myName, userAge: myAge} = userData;
 console.log(myName, myAge);
+
+// tepmlate literals
+const userName = "Max";
+const greeting = `This is a heading!
+I'm ${userName}.
+This is cool!`;
+console.log(greeting);
+
