@@ -45,3 +45,14 @@ const countdown = (start: number = 10): void => {
     console.log("Done!", start);
 }
 countdown();
+
+//rest and spread
+console.log("REST & SPREAD");
+const numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3));
+console.log(Math.max(...numbers));
+
+function makeArray(...args: number[]) {
+    return args;
+}
+console.log(makeArray(1, 2, 6));
