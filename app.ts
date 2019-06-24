@@ -1,76 +1,13 @@
-// let and const
-console.log("LET & CONST");
-let variable = "Test";
-console.log(variable);
-variable = "Another value";
-console.log(variable);
+class Person {
+    name: string;
+    private type: string;
+    protected age: number;
 
-const maxLevels = 100;
-console.log(maxLevels);
-// maxLevels = 99; //won't work
-
-// block scope
-function reset() {
-    let variable = null;
-    console.log(variable);
-}
-reset();
-console.log(variable);
-
-// Arrow Functions
-console.log("ARROW FUNCTIONS");
-const addNumbers = function(number1: number, number2: number): number {
-    return number1 + number2;
-}
-console.log(addNumbers(10, 3));
-
-const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
-console.log(multiplyNumbers(10, 3));
-
-const greet = () => {
-    console.log("Hello");
-}
-greet();
-
-const greetFriend = friend => console.log(friend);
-greetFriend("Manu");
-
-// Default Parameters
-console.log("DEFAULT PARAMETERS");
-const countdown = (start: number = 10): void => {
-    console.log(start);
-    while (start > 0) {
-        start--;
+    constructor(name: string, public username: string){
+        this.name = name;
     }
-    console.log("Done!", start);
 }
-countdown();
 
-//rest and spread
-console.log("REST & SPREAD");
-const numbers = [1, 10, 99, -5];
-console.log(Math.max(33, 99, 10, -3));
-console.log(Math.max(...numbers));
-
-function makeArray(...args: number[]) {
-    return args;
-}
-console.log(makeArray(1, 2, 6));
-
-// destructuring
-console.log("DESTRUCTURING");
-const myHobbies = ["cooking", "sports"];
-const [hobby1, hobby2] = myHobbies;
-console.log(hobby1, hobby2);
-
-const userData = {userName: "Max", userAge: 27};
-const {userName: myName, userAge: myAge} = userData;
-console.log(myName, myAge);
-
-// tepmlate literals
-const userName = "Max";
-const greeting = `This is a heading!
-I'm ${userName}.
-This is cool!`;
-console.log(greeting);
+const person = new Person("Max", "max");
+console.log(person.name, person.username);
 
