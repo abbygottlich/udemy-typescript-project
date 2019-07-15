@@ -95,7 +95,7 @@ console.log(newProject);
 // private constructors
 class OnlyOne {
     private static instance: OnlyOne;
-    private constructor(public name: string) {}
+    private constructor(public readonly name: string) {}
 
     static getInstance() {
         if(!OnlyOne.instance) {
@@ -104,6 +104,8 @@ class OnlyOne {
         return OnlyOne.instance;
     }
 }
-let wrong = new OnlyOne("The Only One");
+// let wrong = new OnlyOne("The Only One"); --> doesn't work because you can't create a new instance of something with a private constructor
 let right = OnlyOne.getInstance();
+console.log(right.name);
+// right.name = "Something else"; --> won't work because you're trying to reassign a readonly value
 

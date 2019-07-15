@@ -121,5 +121,7 @@ var OnlyOne = /** @class */ (function () {
     };
     return OnlyOne;
 }());
-var wrong = new OnlyOne("The Only One");
+// let wrong = new OnlyOne("The Only One"); --> doesn't work because you can't create a new instance of something with a private constructor
 var right = OnlyOne.getInstance();
+console.log(right.name);
+// right.name = "Something else"; --> won't work because you're trying to reassign a readonly value
